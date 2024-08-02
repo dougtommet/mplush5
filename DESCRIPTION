@@ -15,3 +15,5 @@ Depends:
 RoxygenNote: 7.2.3
 Imports: 
     rhdf5
+URL: https://github.com/dougtommet/mplush5
+BugReports: https://github.com/dougtommet/mplush5/issues
