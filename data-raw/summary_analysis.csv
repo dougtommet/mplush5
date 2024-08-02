@@ -1,0 +1,99 @@
+description,storagetype,datatype,section
+Number of groups,attribute,integer,specifications
+Number of observations,dataset,integer,specifications
+Number of dependent variables,attribute,integer,specifications
+Number of independent variables,attribute,integer,specifications
+Number of continuous latent variables,attribute,integer,specifications
+Estimator,attribute,string,specifications
+Information matrix,attribute,string,specifications
+Maximum number of iterations,attribute,integer,specifications
+Convergence criterion,attribute,float,specifications
+Maximum number of EM iterations,attribute,integer,specifications
+Convergence criteria for the EM algorithm,heading,3,specifications
+Loglikelihood change,attribute,float,specifications
+Relative loglikelihood change,attribute,float,specifications
+Derivative,attribute,float,specifications
+Minimum variance,attribute,float,specifications
+Maximum number of steepest descent iterations,attribute,integer,specifications
+Maximum number of iterations for H1,attribute,integer,specifications
+Convergence criterion for H1,attribute,float,specifications
+Exploratory Factor Analysis Rotation Algorithm,heading,3,specifications
+Number of random starts,attribute,integer,specifications
+Maximum number of iterations,attribute,integer,specifications
+Derivative convergence criterion,attribute,float,specifications
+Number of bootstrap draws,heading,2,specifications
+Requested,attribute,integer,specifications
+Completed,attribute,integer,specifications
+Optimization Specifications for the Quasi-Newton Algorithm for Continuous Outcomes,heading,2,specifications
+Maximum number of iterations,attribute,integer,specifications
+Convergence criterion,attribute,float,specifications
+Optimization Specifications for the EM Algorithm,heading,2,specifications
+Maximum number of iterations,attribute,integer,specifications
+Convergence criteria,heading,3,specifications
+Loglikelihood change,attribute,float,specifications
+Optimization algorithm,attribute,string,specifications
+Input data file(s),heading,2,specifications
+Input data format,attribute,string,specifications
+Data files,dataset,string,specifications
+Observed dependent variables,heading,-1,variables
+Continuous,dataset,string,variables
+Censored,dataset,string,variables
+Binary and ordered categorical (ordinal),dataset,string,variables
+Unordered categorical (nominal),dataset,string,variables
+Count,dataset,string,variables
+Constant hazard,dataset,string,variables
+Parametric,dataset,string,variables
+Parametric time intervals,dataset,integer,variables
+Semi-parametric,dataset,string,variables
+Semi-parametric time intervals,dataset,integer,variables
+Non-parametric,dataset,string,variables
+Observed dependent variables,endheading,,variables
+Observed independent variables,heading,1,variables
+Observed independent variables,dataset,string,variables
+Continuous latent variables,heading,1,variables
+Continuous latent variables,dataset,string,variables
+Observed auxiliary variables,heading,1,variables
+Observed auxiliary variables,dataset,string,variables
+Categorical latent variables,heading,,variables
+Categorical latent variables,dataset,string,variables
+Knownclass,attribute,string,variables
+Categorical latent variables,endheading,,variables
+Variables with special functions,heading,-1,variables
+Grouping variable,attribute,string,variables
+Pattern variable,attribute,string,variables
+Cohort variable,attribute,string,variables
+Stratification,attribute,string,variables
+Cluster variable,attribute,string,variables
+Cluster variables,attribute,string,variables
+Weight variable,attribute,string,variables
+Weight scaling,attribute,string,variables
+Between weight variable for level 3,attribute,string,variables
+Between weight scaling for level 3,attribute,string,variables
+ID variable,attribute,string,variables
+Time-censoring variables,dataset,string,variables
+Within variables,dataset,string,variables
+Level 1 and level 2a between variables,dataset,string,variables
+Level 1 and level 2 between variables,dataset,string,variables
+Level 1 and level 2b between variables,dataset,string,variables
+Level 1 and level 3 between variables,dataset,string,variables
+Level 2a between variables,dataset,string,variables
+Level 2 between variables,dataset,string,variables
+Level 2b between variables,dataset,string,variables
+Level 3 between variables,dataset,string,variables
+Level 2a and level 2b between variables,dataset,string,variables
+Level 2 and level 3 between variables,dataset,string,variables
+Between variables,dataset,string,variables
+Time scores,dataset,string,variables
+Training variables,dataset,string,variables
+Training variables,attribute,string,variables
+Centering,dataset,string,variables
+Centering,attribute,string,variables
+Variables with special functions,endheading,,variables
+Variables used for imputation,heading,-1,variables
+Variables imputed as continuous,dataset,string,variables
+Variables imputed as categorical,dataset,string,variables
+Variables imputed as censored,dataset,string,variables
+Variables imputed as count,dataset,string,variables
+Variables imputed as nominal,dataset,string,variables
+Variables used for imputation,endheading,,variables
+Treatment of predictor variables,attribute,string,variables

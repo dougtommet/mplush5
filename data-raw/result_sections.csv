@@ -1,0 +1,54 @@
+section_name,function_name,arguments
+Input instructions,mplus.print.input.instructions,
+Errors and warnings,mplus.print.errors.and.warnings,
+Summary of Analysis,mplus.print.summary.analysis,
+Model Fit Information,mplus.print.model.fit.information,
+Model Fit Information (configural),mplus.print.model.fit.information,invariance=1
+Model Fit Information (metric),mplus.print.model.fit.information,invariance=2
+Model Fit Information (scalar),mplus.print.model.fit.information,invariance=3
+Model Results,mplus.print.model.results,
+Model Results (configural),mplus.print.model.results,invariance=1
+Model Results (metric),mplus.print.model.results,invariance=2
+Model Results (scalar),mplus.print.model.results,invariance=3
+Confidence Intervals of Model Results,mplus.print.confidence.intervals,
+Confidence Intervals of Model Results (configural),mplus.print.confidence.intervals,invariance=1
+Confidence Intervals of Model Results (metric),mplus.print.confidence.intervals,invariance=2
+Confidence Intervals of Model Results (scalar),mplus.print.confidence.intervals,invariance=3
+Credibility Intervals of Model Results,mplus.print.confidence.intervals,cred=TRUE
+Credibility Intervals of Model Results (configural),mplus.print.confidence.intervals,"cred=TRUE,invariance=1"
+Credibility Intervals of Model Results (metric),mplus.print.confidence.intervals,"cred=TRUE,invariance=2"
+Credibility Intervals of Model Results (scalar),mplus.print.confidence.intervals,"cred=TRUE,invariance=3"
+Standardized Model Results,mplus.print.standardized.model.results,
+Confidence Intervals of Standardized Model Results,mplus.print.standardized.confidence.intervals,
+Credibility Intervals of Standardized Model Results,mplus.print.standardized.confidence.intervals,cred=TRUE
+R-Square,mplus.print.rsquare,
+R-Square (configural),mplus.print.rsquare,invariance=1
+R-Square (metric),mplus.print.rsquare,invariance=2
+R-Square (scalar),mplus.print.rsquare,invariance=3
+IRT Parameterization,mplus.print.irt.parameterization,
+IRT Parameterization (configural),mplus.print.irt.parameterization,invariance=1
+IRT Parameterization (metric),mplus.print.irt.parameterization,invariance=2
+IRT Parameterization (scalar),mplus.print.irt.parameterization,invariance=3
+Credibility Intervals of Standardized Model Results,mplus.print.standardized.confidence.intervals,
+Credibility Intervals of Model Results,mplus.print.confidence.intervals,cred=TRUE
+Model Modification Indices,mplus.print.model.modification.indices,
+Results in Probability Scale,mplus.print.results.in.probability.scale,
+Results in Probability Scale (configural),mplus.print.results.in.probability.scale,invariance=1
+Results in Probability Scale (metric),mplus.print.results.in.probability.scale,invariance=2
+Results in Probability Scale (scalar),mplus.print.results.in.probability.scale,invariance=3
+Logistic Regression Odds Ratio Results,mplus.print.logistic.regressions.odds.ratio.results,
+Confidence Intervals in Probability Scale,mplus.print.confidence.intervals.in.probability.scale,
+Confidence Intervals in Probability Scale (configural),mplus.print.confidence.intervals.in.probability.scale,invariance=1
+Confidence Intervals in Probability Scale (metric),mplus.print.confidence.intervals.in.probability.scale,invariance=2
+Confidence Intervals in Probability Scale (scalar),mplus.print.confidence.intervals.in.probability.scale,invariance=3
+Credibility Intervals in Probability Scale,mplus.print.confidence.intervals.in.probability.scale,cred=TRUE
+Credibility Intervals in Probability Scale (configural),mplus.print.confidence.intervals.in.probability.scale,"cred=TRUE,invariance=1"
+Credibility Intervals in Probability Scale (metric),mplus.print.confidence.intervals.in.probability.scale,"cred=TRUE,invariance=2"
+Credibility Intervals in Probability Scale (scalar),mplus.print.confidence.intervals.in.probability.scale,"cred=TRUE,invariance=3"
+Latent Class Indicator Odds Ratios for the Latent Classes,mplus.print.latent.class.indicator.odds.ratios,
+Latent Class Indicator Odds Ratios for the Latent Classes (configural),mplus.print.latent.class.indicator.odds.ratios,invariance=1
+Latent Class Indicator Odds Ratios for the Latent Classes (metric),mplus.print.latent.class.indicator.odds.ratios,invariance=2
+Latent Class Indicator Odds Ratios for the Latent Classes (scalar),mplus.print.latent.class.indicator.odds.ratios,invariance=3
+Brant Wald Test For Proportional Odds,mplus.print.brant.wald.test,
+Within-level Standardized Model Results For Each Cluster,mplus.print.standardized.model.results,cluster=TRUE
+Within-level R-Square For Each Cluster,mplus.print.rsquare,cluster=TRUE

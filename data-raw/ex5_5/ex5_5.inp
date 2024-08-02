@@ -1,0 +1,19 @@
+TITLE:
+this is an example of a two-parameter logistic
+item response theory (IRT) model
+DATA:
+FILE = "ex5_5_0e06abc9e90586008564a284d1c653ea.dat";
+ 
+VARIABLE:
+NAMES = u1 u2 u3 u4 u5 u6 u7 u8 u9 u10 u11 u12 u13 u14 u15 u16 u17 u18 u19 u20; 
+ MISSING=.;
+ CATEGORICAL ARE u1-u20;
+ANALYSIS:
+ESTIMATOR = MLR; 
+MODEL:
+f BY u1-u20*;
+       f@1;
+OUTPUT:
+standardized; cinterval; TECH1; TECH8;
+SAVEDATA:
+H5RESULTS = ex5_5.h5;

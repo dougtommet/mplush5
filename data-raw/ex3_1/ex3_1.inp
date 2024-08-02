@@ -1,0 +1,17 @@
+TITLE:
+this is an example of a simple linear
+  regression for a continuous observed
+  dependent variable with two covariates
+DATA:
+FILE = "ex3_1_aa78f01013fe7acb644cf7c3710aa050.dat";
+ 
+VARIABLE:
+NAMES = y1 x1 x3; 
+ MISSING=.;
+ 
+MODEL:
+y1 ON x1 x3;
+OUTPUT:
+standardized; cinterval;
+SAVEDATA:
+H5RESULTS = ex3_1.h5;
