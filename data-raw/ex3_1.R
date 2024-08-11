@@ -38,6 +38,9 @@ MplusAutomation::mplusModeler(mod, modelout = "ex3_1.inp", run = 1)
 fs::file_copy(here::here("data-raw", "ex3_1", "ex3_1.h5"),
               here::here("inst", "extdata", "ex3_1.h5"),
               overwrite = TRUE)
+fs::file_copy(here::here("data-raw", "ex3_1", "ex3_1.out"),
+              here::here("inst", "extdata", "ex3_1.out"),
+              overwrite = TRUE)
 setwd(here::here())
 
 usethis::use_data(ex3_1, overwrite = TRUE)

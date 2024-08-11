@@ -8,6 +8,15 @@
 \description{
 This package contains a set of functions that extract the results stored in the H5 file saved by Mplus. The functions were written by Thuy Nguyen of Muthen & Muthen and can be found at https://www.statmodel.com/mplus-R/H5Results.zip. Minimal modifications were made to make them work in a package.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/dougtommet/mplush5}
+  \item \url{https://dougtommet.github.io/mplush5/}
+  \item Report bugs at \url{https://github.com/dougtommet/mplush5/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Douglas Tommet \email{douglas_tommet@brown.edu}
 

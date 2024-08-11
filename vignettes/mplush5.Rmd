@@ -1,0 +1,68 @@
+---
+title: "Using mplush5"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using mplush5}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mplush5)
+```
+
+This package contains functions to read in the h5 data file created by Mplus.
+
+Before using any functions in this package, you need to have an h5 file available. This code shows how to use MplusAutomation to run a Mplus model. Note in the savedata option, "H5RESULTS" is used to specify the h5 file.
+
+```{r}
+#| eval: false
+
+mod <- MplusAutomation::mplusObject(
+  TITLE = "this is an example of a simple linear
+  regression for a continuous observed
+  dependent variable with two covariates",
+  MODEL = "y1 ON x1 x3;",
+  OUTPUT = "standardized; cinterval;",
+  SAVEDATA = "H5RESULTS = ex3_1.h5;",
+  rdata = ex3_1_df
+
+)
+
+MplusAutomation::mplusModeler(mod, modelout = "ex3_1.inp", run = 1)
+
+```
+
+The first function to use is `mplus.view.results()`. This function lists what is available in the h5 function. Mplus writes different pieces of information to the h5 file depending on the type of model and options specified, so not all of the functions in this package can be used on every h5 file.
+
+```{r}
+ex3_1 <- system.file("extdata", "ex3_1.h5", package = "mplush5")
+mplus.view.results(ex3_1)
+```
+
+The `mplus.view.results()` function shows that for this h5 file, the functions `mplus.print.input.instructions()`, `mplus.print.summary.analysis()`, `mplus.print.model.fit.information()`, `mplus.print.model.results()`, `mplus.print.confidence.intervals()`, `mplus.print.standardized.model.results()`,
+`mplus.print.standardized.confidence.intervals()` and `mplus.print.rsquare()` can be used.
+
+To get the model results use the `mplus.print.model.results()` function.
+
+```{r}
+ex3_1 <- system.file("extdata", "ex3_1.h5", package = "mplush5")
+results <- mplus.print.model.results(ex3_1)
+results
+```
+
+The h5 file is not the only way to access these results. The MplusAutomation package has a function `readModels()` that reads and parses the Mplus output file. The following code shows how to get the same information using `readModels()`.
+
+```{r}
+ex3_1.out <- system.file("extdata", "ex3_1.out", package = "mplush5")
+ex3_1_output <- MplusAutomation::readModels(ex3_1.out)
+ex3_1_output[["parameters"]][["unstandardized"]]
+
+```

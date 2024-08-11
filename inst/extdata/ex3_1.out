@@ -1,0 +1,332 @@
+Mplus VERSION 8.11 (Mac)
+MUTHEN & MUTHEN
+07/11/2024   9:04 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  this is an example of a simple linear
+    regression for a continuous observed
+    dependent variable with two covariates
+  DATA:
+  FILE = "ex3_1_aa78f01013fe7acb644cf7c3710aa050.dat";
+
+  VARIABLE:
+  NAMES = y1 x1 x3;
+   MISSING=.;
+
+  MODEL:
+  y1 ON x1 x3;
+  OUTPUT:
+  standardized; cinterval;
+  SAVEDATA:
+  H5RESULTS = ex3_1.h5;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+this is an example of a simple linear
+regression for a continuous observed
+dependent variable with two covariates
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    1
+Number of independent variables                                  2
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   Y1
+
+Observed independent variables
+   X1          X3
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  ex3_1_aa78f01013fe7acb644cf7c3710aa050.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              Y1            X1            X3
+              ________      ________      ________
+ Y1             1.000
+ X1             1.000         1.000
+ X3             1.000         1.000         1.000
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                    0.485      -0.012      -4.116    0.20%      -0.768      0.070      0.429
+             500.000       2.408      -0.136       5.111    0.20%       0.777      1.894
+     X1                    0.001      -0.133      -3.145    0.20%      -0.922     -0.235      0.023
+             500.000       1.094      -0.162       2.920    0.20%       0.304      0.876
+     X3                   -0.042      -0.057      -3.139    0.20%      -0.921     -0.353     -0.040
+             500.000       0.957      -0.357       2.875    0.20%       0.274      0.859
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        4
+
+Loglikelihood
+
+          H0 Value                        -694.334
+          H1 Value                        -694.334
+
+Information Criteria
+
+          Akaike (AIC)                    1396.667
+          Bayesian (BIC)                  1413.526
+          Sample-Size Adjusted BIC        1400.830
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            469.585
+          Degrees of Freedom                     2
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.969      0.042     23.356      0.000
+    X3                 0.649      0.044     14.626      0.000
+
+ Intercepts
+    Y1                 0.511      0.043     11.765      0.000
+
+ Residual Variances
+    Y1                 0.941      0.060     15.811      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.483E+00
+       (ratio of smallest to largest eigenvalue)
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.653      0.024     26.863      0.000
+    X3                 0.409      0.028     14.516      0.000
+
+ Intercepts
+    Y1                 0.329      0.030     11.081      0.000
+
+ Residual Variances
+    Y1                 0.391      0.027     14.326      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.625      0.022     28.069      0.000
+    X3                 0.418      0.027     15.597      0.000
+
+ Intercepts
+    Y1                 0.329      0.030     11.081      0.000
+
+ Residual Variances
+    Y1                 0.391      0.027     14.326      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.969      0.042     23.356      0.000
+    X3                 0.649      0.044     14.626      0.000
+
+ Intercepts
+    Y1                 0.511      0.043     11.765      0.000
+
+ Residual Variances
+    Y1                 0.941      0.060     15.811      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    Y1                 0.609      0.027     22.316      0.000
+
+
+CONFIDENCE INTERVALS OF MODEL RESULTS
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ Y1       ON
+    X1               0.863       0.888       0.901       0.969       1.038       1.051       1.076
+    X3               0.535       0.562       0.576       0.649       0.722       0.736       0.763
+
+ Intercepts
+    Y1               0.399       0.426       0.440       0.511       0.582       0.596       0.623
+
+ Residual Variances
+    Y1               0.788       0.825       0.843       0.941       1.039       1.058       1.095
+
+
+CONFIDENCE INTERVALS OF STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ Y1       ON
+    X1               0.591       0.606       0.613       0.653       0.693       0.701       0.716
+    X3               0.337       0.354       0.363       0.409       0.456       0.464       0.482
+
+ Intercepts
+    Y1               0.253       0.271       0.280       0.329       0.378       0.388       0.406
+
+ Residual Variances
+    Y1               0.321       0.337       0.346       0.391       0.436       0.444       0.461
+
+
+STDY Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ Y1       ON
+    X1               0.567       0.581       0.588       0.625       0.661       0.668       0.682
+    X3               0.349       0.366       0.374       0.418       0.462       0.471       0.487
+
+ Intercepts
+    Y1               0.253       0.271       0.280       0.329       0.378       0.388       0.406
+
+ Residual Variances
+    Y1               0.321       0.337       0.346       0.391       0.436       0.444       0.461
+
+
+STD Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ Y1       ON
+    X1               0.863       0.888       0.901       0.969       1.038       1.051       1.076
+    X3               0.535       0.562       0.576       0.649       0.722       0.736       0.763
+
+ Intercepts
+    Y1               0.399       0.426       0.440       0.511       0.582       0.596       0.623
+
+ Residual Variances
+    Y1               0.788       0.825       0.843       0.941       1.039       1.058       1.095
+
+
+SAVEDATA INFORMATION
+
+
+  Results in H5 Format
+
+  Save file
+    ex3_1.h5
+
+  List of results saved
+
+    Summary of Analysis
+    Model Fit Information
+    Model Results
+    Standardized Model Results
+    R-Square
+    Confidence Intervals of Model Results
+    Confidence Intervals of Standardized Model Results
+
+     Beginning Time:  21:04:03
+        Ending Time:  21:04:03
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2024 Muthen & Muthen
