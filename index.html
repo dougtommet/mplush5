@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Extract the Resutls Stored in the H5 File Saved From Mplus • mplush5</title>
+<title>Extract the Results Stored in the H5 File Saved From Mplus • mplush5</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Extract the Resutls Stored in the H5 File Saved From Mplus">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Extract the Results Stored in the H5 File Saved From Mplus">
 <meta name="description" content="This package contains a set of functions that extract the results stored in the H5 file saved by Mplus. The functions were written by Thuy Nguyen of Muthen &amp; Muthen and can be found at https://www.statmodel.com/mplus-R/H5Results.zip. Minimal modifications were made to make them work in a package.">
 <meta property="og:description" content="This package contains a set of functions that extract the results stored in the H5 file saved by Mplus. The functions were written by Thuy Nguyen of Muthen &amp; Muthen and can be found at https://www.statmodel.com/mplus-R/H5Results.zip. Minimal modifications were made to make them work in a package.">
 </head>
@@ -31,6 +31,7 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link" href="articles/mplush5.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -45,8 +46,35 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9">
-This package contains a set of functions that extract the results stored in the H5 file saved by Mplus. The functions were written by Thuy Nguyen of Muthen &amp; Muthen and can be found at https://www.statmodel.com/mplus-R/H5Results.zip. Minimal modifications were made to make them work in a package.
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header"><h1 id="mplush5">mplush5<a class="anchor" aria-label="anchor" href="#mplush5"></a>
+</h1></div>
+<!-- badges: start -->
+<!-- badges: end -->
+<p>A new feature of Mplus is the ability to have the results saved to an external (hdf5) file that can then be used in other statistical programs. An hdf5 file is a hierarchical data format that is able to store large amounts of data.</p>
+<p>It is possible to read a hdf5 file directly into R (using the <code>rhdf5</code> library) but it can be difficult to navigate around the file and find the desired results. Thuy Nguyen of Muthen &amp; Muthen wrote a series of functions that make it easier to access the results of the hdf5 file. These functions were saved in two <code>.R</code> files that would need to be downloaded from the web and sourced in R before they could be used. This made it difficult to use these functions when collaborating with others.</p>
+<p>The goal of <code>mplush5</code> is to put these functions into a R package so that it becomes easier to use these functions in collaboration with others.</p>
+<p>The original files can be found at <a href="https://www.statmodel.com/mplus-R/H5Results.zip" class="external-link uri">https://www.statmodel.com/mplus-R/H5Results.zip</a>.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the development version of <code>mplush5</code> from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"dougtommet/mplush5"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<p>This is a basic example which shows you how to solve a common problem:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dougtommet/mplush5" class="external-link">mplush5</a></span><span class="op">)</span></span>
+<span><span class="co">## basic example code</span></span>
+<span><span class="co"># h5_path &lt;- path_to_h5_file</span></span>
+<span><span class="co"># mplus.view.results(h5_path)</span></span>
+<span><span class="co"># mplus.print.model.results(h5_path)</span></span></code></pre></div>
+</div>
+</div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
