@@ -4,7 +4,7 @@
 \name{mplush5-package}
 \alias{mplush5}
 \alias{mplush5-package}
-\title{mplush5: Extract the Resutls Stored in the H5 File Saved From Mplus}
+\title{mplush5: Extract the Results Stored in the H5 File Saved From Mplus}
 \description{
 This package contains a set of functions that extract the results stored in the H5 file saved by Mplus. The functions were written by Thuy Nguyen of Muthen & Muthen and can be found at https://www.statmodel.com/mplus-R/H5Results.zip. Minimal modifications were made to make them work in a package.
 }
