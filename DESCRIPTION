@@ -1,6 +1,6 @@
 Package: mplush5
 Type: Package
-Title: Extract the Resutls Stored in the H5 File Saved From Mplus
+Title: Extract the Results Stored in the H5 File Saved From Mplus
 Version: 0.1.0
 Authors@R: person("Douglas", "Tommet", email = "douglas_tommet@brown.edu", role = c("aut", "cre"))
 Description: This package contains a set of functions that extract the results 
