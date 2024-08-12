@@ -18,7 +18,27 @@ knitr::opts_chunk$set(
 library(mplush5)
 ```
 
-This package contains functions to read in the h5 data file created by Mplus.
+# How to use mplush5
+
+This is a guide on how to use the mplush5 library.
+
+## What is an h5 file?
+
+An h5/hdf5 file is a type of file that is used to store large amounts of data. The data are stored in a hierarchical data format. Mplus uses this format to save the numeric results of the model to an external file.
+
+## Why do we need these functions?
+
+It is possible to read an h5 file directly into R. However, these files are large and difficult to navigate. Also, the structure of the h5 file changes by the modeling options used in Mplus. Because of this, it is difficult to find the desired results.
+
+Below is an example of an h5 file.
+
+```{r}
+ex3_1 <- system.file("extdata", "ex3_1.h5", package = "mplush5")
+raw_h5 <- rhdf5::h5dump(ex3_1, load=TRUE)
+str(raw_h5)
+```
+
+## Saving an h5 file
 
 Before using any functions in this package, you need to have an h5 file available. This code shows how to use MplusAutomation to run a Mplus model. Note in the savedata option, "H5RESULTS" is used to specify the h5 file.
 
@@ -37,8 +57,9 @@ mod <- MplusAutomation::mplusObject(
 )
 
 MplusAutomation::mplusModeler(mod, modelout = "ex3_1.inp", run = 1)
-
 ```
+
+## First step
 
 The first function to use is `mplus.view.results()`. This function lists what is available in the h5 function. Mplus writes different pieces of information to the h5 file depending on the type of model and options specified, so not all of the functions in this package can be used on every h5 file.
 
@@ -47,10 +68,27 @@ ex3_1 <- system.file("extdata", "ex3_1.h5", package = "mplush5")
 mplus.view.results(ex3_1)
 ```
 
-The `mplus.view.results()` function shows that for this h5 file, the functions `mplus.print.input.instructions()`, `mplus.print.summary.analysis()`, `mplus.print.model.fit.information()`, `mplus.print.model.results()`, `mplus.print.confidence.intervals()`, `mplus.print.standardized.model.results()`,
-`mplus.print.standardized.confidence.intervals()` and `mplus.print.rsquare()` can be used.
+## Subsequent steps
 
-To get the model results use the `mplus.print.model.results()` function.
+The `mplus.view.results()` function above shows that for this h5 file, the following functions can be used:
+
+-   `mplus.print.input.instructions()`
+
+-   `mplus.print.summary.analysis()`
+
+-   `mplus.print.model.fit.information()`
+
+-   `mplus.print.model.results()`
+
+-   `mplus.print.confidence.intervals()`
+
+-   `mplus.print.standardized.model.results()`
+
+-   `mplus.print.standardized.confidence.intervals()`
+
+-   `mplus.print.rsquare()`
+
+To use any of these functions just specify the path to the h5 file.  The following code shows how to use the `mplus.print.model.results()` function to get the model results.
 
 ```{r}
 ex3_1 <- system.file("extdata", "ex3_1.h5", package = "mplush5")
@@ -58,7 +96,9 @@ results <- mplus.print.model.results(ex3_1)
 results
 ```
 
-The h5 file is not the only way to access these results. The MplusAutomation package has a function `readModels()` that reads and parses the Mplus output file. The following code shows how to get the same information using `readModels()`.
+## Other approaches
+
+The h5 file is not the only way to access results from Mplus. The MplusAutomation package has a function `readModels()` that reads and parses the Mplus output file. The following code shows how to get the same information using `readModels()`.
 
 ```{r}
 ex3_1.out <- system.file("extdata", "ex3_1.out", package = "mplush5")

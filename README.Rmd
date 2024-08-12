@@ -16,15 +16,20 @@ knitr::opts_chunk$set(
 # mplush5
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of mplush5 is to put functions that read the Mplus h5 file into a R package.  
+A new feature of Mplus is the ability to have the results saved to an external (hdf5) file that can then be used in other statistical programs. An hdf5 file is a hierarchical data format that is able to store large amounts of data.
 
-The functions were written by Thuy Nguyen of Muthen & Muthen and are available at [https://www.statmodel.com/mplus-R/H5Results.zip](https://www.statmodel.com/mplus-R/H5Results.zip).
+It is possible to read a hdf5 file directly into R (using the `rhdf5` library) but it can be difficult to navigate around the file and find the desired results. Thuy Nguyen of Muthen & Muthen wrote a series of functions that make it easier to access the results of the hdf5 file. These functions were saved in two `.R` files that would need to be downloaded from the web and sourced in R before they could be used. This made it difficult to use these functions when collaborating with others.
+
+The goal of `mplush5` is to put these functions into a R package so that it becomes easier to use these functions in collaboration with others.
+
+The original files can be found at <https://www.statmodel.com/mplus-R/H5Results.zip>.
 
 ## Installation
 
-You can install the development version of mplush5 from [GitHub](https://github.com/) with:
+You can install the development version of `mplush5` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -42,5 +47,3 @@ library(mplush5)
 # mplus.view.results(h5_path)
 # mplus.print.model.results(h5_path)
 ```
-
-
