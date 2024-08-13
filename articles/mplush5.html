@@ -222,10 +222,14 @@ MplusAutomation package has a function <code>readModels()</code> that
 reads and parses the Mplus output file. The following code shows how to
 get the same information using <code>readModels()</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># ex3_1.out &lt;- system.file("extdata", "ex3_1.out", package = "mplush5")</span></span>
-<span><span class="co"># ex3_1_output &lt;- MplusAutomation::readModels(ex3_1.out)</span></span>
-<span><span class="co"># ex3_1_output[["parameters"]][["unstandardized"]]</span></span></code></pre></div>
-<p>other stuff</p>
+<code class="sourceCode R"><span><span class="va">ex3_1.out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"ex3_1.out"</span>, package <span class="op">=</span> <span class="st">"mplush5"</span><span class="op">)</span></span>
+<span><span class="va">ex3_1_output</span> <span class="op">&lt;-</span> <span class="fu">MplusAutomation</span><span class="fu">::</span><span class="fu"><a href="https://michaelhallquist.github.io/MplusAutomation/reference/readModels.html" class="external-link">readModels</a></span><span class="op">(</span><span class="va">ex3_1.out</span><span class="op">)</span></span>
+<span><span class="va">ex3_1_output</span><span class="op">[[</span><span class="st">"parameters"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="st">"unstandardized"</span><span class="op">]</span><span class="op">]</span></span>
+<span><span class="co">#&gt;          paramHeader param   est    se est_se pval</span></span>
+<span><span class="co">#&gt; 1              Y1.ON    X1 0.969 0.042 23.356    0</span></span>
+<span><span class="co">#&gt; 2              Y1.ON    X3 0.649 0.044 14.626    0</span></span>
+<span><span class="co">#&gt; 3         Intercepts    Y1 0.511 0.043 11.765    0</span></span>
+<span><span class="co">#&gt; 4 Residual.Variances    Y1 0.941 0.060 15.811    0</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
