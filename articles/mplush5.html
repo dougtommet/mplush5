@@ -136,7 +136,7 @@ file available. This code shows how to use MplusAutomation to run a
 Mplus model. Note in the savedata option, “H5RESULTS” is used to specify
 the h5 file.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu">MplusAutomation</span><span class="fu">::</span><span class="fu">mplusObject</span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu">MplusAutomation</span><span class="fu">::</span><span class="fu"><a href="https://michaelhallquist.github.io/MplusAutomation/reference/mplusObject.html" class="external-link">mplusObject</a></span><span class="op">(</span></span>
 <span>  TITLE <span class="op">=</span> <span class="st">"this is an example of a simple linear</span></span>
 <span><span class="st">  regression for a continuous observed</span></span>
 <span><span class="st">  dependent variable with two covariates"</span>,</span>
@@ -147,7 +147,7 @@ the h5 file.</p>
 <span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">MplusAutomation</span><span class="fu">::</span><span class="fu">mplusModeler</span><span class="op">(</span><span class="va">mod</span>, modelout <span class="op">=</span> <span class="st">"ex3_1.inp"</span>, run <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">MplusAutomation</span><span class="fu">::</span><span class="fu"><a href="https://michaelhallquist.github.io/MplusAutomation/reference/mplusModeler.html" class="external-link">mplusModeler</a></span><span class="op">(</span><span class="va">mod</span>, modelout <span class="op">=</span> <span class="st">"ex3_1.inp"</span>, run <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="first-step">First step<a class="anchor" aria-label="anchor" href="#first-step"></a>
@@ -225,6 +225,7 @@ get the same information using <code>readModels()</code>.</p>
 <code class="sourceCode R"><span><span class="co"># ex3_1.out &lt;- system.file("extdata", "ex3_1.out", package = "mplush5")</span></span>
 <span><span class="co"># ex3_1_output &lt;- MplusAutomation::readModels(ex3_1.out)</span></span>
 <span><span class="co"># ex3_1_output[["parameters"]][["unstandardized"]]</span></span></code></pre></div>
+<p>other stuff</p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
