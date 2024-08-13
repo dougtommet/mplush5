@@ -18,7 +18,7 @@
 #' \dontrun{
 #' mplus.get.group.attribute('ex8.1.gh5','individual_data','var_names')
 #' }
-#'
+#' @noRd
 mplus.get.group.attribute <- function(file, groupstr, attrstr) {
   if ( !(file.exists(file))) {
     cstr <- paste("- file does not exist:",file,"\n")
@@ -56,7 +56,7 @@ mplus.get.group.attribute <- function(file, groupstr, attrstr) {
 #' \dontrun{
 #' mplus.check.group.attribute('ex8.1.gh5','individual_data','var_names')
 #' }
-#'
+#' @noRd
 mplus.check.group.attribute <- function(file, groupstr, attrstr) {
   if ( !(file.exists(file))) {
     cstr <- paste("- file does not exist:",file,"\n")
@@ -87,7 +87,7 @@ mplus.check.group.attribute <- function(file, groupstr, attrstr) {
 #' \dontrun{
 #' mplus.get.group.dataset('ex8.1.gh5','bayesian_data','statements')
 #' }
-#'
+#' @noRd
 mplus.get.group.dataset <- function(file, groupstr, datastr) {
   if ( !(file.exists(file))) {
     cstr <- paste("- file does not exist:",file,"\n")
@@ -128,7 +128,7 @@ mplus.get.group.dataset <- function(file, groupstr, datastr) {
 #' \dontrun{
 #' mplus.get.dataset.attribute('ex8.1.gh5','individual_data','var_names')
 #' }
-#'
+#' @noRd
 mplus.get.dataset.attribute <- function(file, datastr, attrstr) {
   if ( !(file.exists(file))) {
     cstr <- paste("- file does not exist:",file,"\n")

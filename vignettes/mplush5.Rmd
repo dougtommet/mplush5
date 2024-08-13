@@ -106,3 +106,5 @@ The h5 file is not the only way to access results from Mplus. The MplusAutomatio
 # ex3_1_output[["parameters"]][["unstandardized"]]
 
 ```
+
+other stuff
