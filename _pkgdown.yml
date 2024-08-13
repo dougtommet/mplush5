@@ -1,4 +1,35 @@
 url: https://dougtommet.github.io/mplush5/
 template:
   bootstrap: 5
-
+reference:
+- title: "H5 file contents"
+  desc: "Functions for listing what is available in the h5 file"
+  contents:
+  - mplus.get.available.outputs
+  - mplus.view.results
+- title: "Read model results"
+  desc: "Functions for reading the model results"
+  contents:
+  - mplus.print.general.results
+  - mplus.print.model.results
+  - mplus.print.confidence.intervals
+  - mplus.print.standardized.model.results
+  - mplus.print.standardized.confidence.intervals
+  - mplus.print.irt.parameterization
+  - mplus.print.results.in.probability.scale
+  - mplus.print.confidence.intervals.in.probability.scale
+  - mplus.print.logistic.regressions.odds.ratio.results
+  - mplus.print.latent.class.indicator.odds.ratios
+- title: "Read model summary statistics"
+  desc: "Functions for reading the model summary statistics"
+  contents:
+  - mplus.print.model.fit.information
+  - mplus.print.summary.analysis
+  - mplus.print.rsquare
+  - mplus.print.model.modification.indices
+  - mplus.print.brant.wald.test
+- title: "Read Mplus input and output"
+  desc: "Functions for reading the Mplus input and output file"
+  contents:
+  - mplus.print.input.instructions
+  - mplus.print.errors.and.warnings
