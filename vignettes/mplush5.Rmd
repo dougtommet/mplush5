@@ -101,10 +101,9 @@ results
 The h5 file is not the only way to access results from Mplus. The MplusAutomation package has a function `readModels()` that reads and parses the Mplus output file. The following code shows how to get the same information using `readModels()`.
 
 ```{r}
-# ex3_1.out <- system.file("extdata", "ex3_1.out", package = "mplush5")
-# ex3_1_output <- MplusAutomation::readModels(ex3_1.out)
-# ex3_1_output[["parameters"]][["unstandardized"]]
+ex3_1.out <- system.file("extdata", "ex3_1.out", package = "mplush5")
+ex3_1_output <- MplusAutomation::readModels(ex3_1.out)
+ex3_1_output[["parameters"]][["unstandardized"]]
 
 ```
 
-other stuff
